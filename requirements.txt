@@ -1,0 +1,7 @@
+torch==2.4.1
+torchvision==0.19.1 
+torchaudio==2.4.1
+datasets==3.4.1 peft==0.15.0 
+accelerate==1.5.2 
+transformers==4.46.0 
+bitsandbytes==0.45.3

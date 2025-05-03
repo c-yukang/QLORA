@@ -1,0 +1,678 @@
+[
+    {
+        "nl": "Move the drone to a position",
+        "code": "AirSim_client.moveToPositionAsync(10, 10, -10, 5)"
+    },
+    {
+        "nl": "Change drone's velocity while moving forward",
+        "code": "AirSim_client.moveByVelocityAsync(10, 0, 0, duration=3).moveByVelocityAsync(15, 0, 0, duration=3)"
+    },
+    {
+        "nl": "Disable the drone's sonar",
+        "code": "AirSim_client.setSonarEnabled(False)"
+    },
+    {
+        "nl": "Enable lidar again",
+        "code": "AirSim_client.setLidarEnabled(True); AirSim_client.moveByVelocityAsync(10, 0, 0, duration=3).join();"
+    },
+    {
+        "nl": "Enable a custom drone trajectory",
+        "code": "AirSim_client.moveOnPathAsync([Vector3r(10,0,-10), Vector3r(20,0,-10)], 5)"
+    },
+    {
+        "nl": "Move backward for 5 seconds",
+        "code": "AirSim_client.moveByVelocityAsync(-5, 0, 0, duration=5).join()"
+    },
+    {
+        "nl": "Move diagonally forward at 5 m/s",
+        "code": "AirSim_client.moveByVelocityAsync(5, -5, 0, duration=3).join()"
+    },
+    {
+        "nl": "Set the drone's wind speed",
+        "code": "AirSim_client.setWindSpeed(10)"
+    },
+    {
+        "nl": "Get the drone's magnetometer data",
+        "code": "print(AirSim_client.getMagnetometerData())"
+    },
+    {
+        "nl": "Move right at 5 m/s",
+        "code": "AirSim_client.moveByVelocityAsync(0, 5, 0, duration=3).join()"
+    },
+    {
+        "nl": "Get the drone's relative velocity",
+        "code": "print(AirSim_client.getRelativeVelocity())"
+    },
+    {
+        "nl": "Get the drone's GPS data",
+        "code": "print(AirSim_client.getGpsData())"
+    },
+    {
+        "nl": "Check the drone's battery status",
+        "code": "battery_status = AirSim_client.getBattery()"
+    },
+    {
+        "nl": "Move the drone forward at a constant speed",
+        "code": "AirSim_client.moveByVelocityAsync(10, 0, 0, duration=3)"
+    },
+    {
+        "nl": "Change the drone's camera view while flying",
+        "code": "AirSim_client.setCameraMode(camera_id=1, mode=AirSimImageType.DepthPerspective).moveByVelocityAsync(10, 0, 0, duration=3)"
+    },
+    {
+        "nl": "Disable the drone's visual detection system",
+        "code": "AirSim_client.setVisualDetectionEnabled(False)"
+    },
+    {
+        "nl": "Check the drone's battery status",
+        "code": "print(AirSim_client.getBattery())"
+    },
+    {
+        "nl": "Move the drone forward",
+        "code": "AirSim_client.moveByVelocityAsync(5, 0, 0, 2).join()"
+    },
+    {
+        "nl": "Set the drone's camera mode",
+        "code": "AirSim_client.setCameraMode(camera_id=0, mode=AirSimImageType.Scene)"
+    },
+    {
+        "nl": "Make the drone rotate to a specific angle",
+        "code": "AirSim_client.rotateToYawAsync(90)"
+    },
+    {
+        "nl": "Get the drone's camera info",
+        "code": "print(AirSim_client.getCameraInfo(camera_id=0))"
+    },
+    {
+        "nl": "Move the drone forward and rotate",
+        "code": "AirSim_client.moveByVelocityAsync(10, 0, 0, duration=3).join(); AirSim_client.rotateToYawAsync(45).join();"
+    },
+    {
+        "nl": "Simulate a drone crash",
+        "code": "AirSim_client.simulateCrash()"
+    },
+    {
+        "nl": "Enable a visual detection system",
+        "code": "AirSim_client.setVisualDetectionEnabled(True); AirSim_client.moveByVelocityAsync(10, 0, 0, duration=3).join();"
+    },
+    {
+        "nl": "Get the drone's current velocity",
+        "code": "print(AirSim_client.getVelocity())"
+    },
+    {
+        "nl": "Move the drone left at a constant speed",
+        "code": "AirSim_client.moveByVelocityAsync(0, -10, 0, duration=3)"
+    },
+    {
+        "nl": "Get the drone's heading",
+        "code": "print(AirSim_client.getYaw())"
+    },
+    {
+        "nl": "Set the drone's rotation",
+        "code": "AirSim_client.setRotation(0, 90, 0)"
+    },
+    {
+        "nl": "Move the drone right",
+        "code": "AirSim_client.moveByVelocityAsync(0, 20, 0, duration=2)"
+    },
+    {
+        "nl": "Rotate 45 degrees",
+        "code": "AirSim_client.rotateToYawAsync(45).join()"
+    },
+    {
+        "nl": "Get the drone's barometer data",
+        "code": "print(AirSim_client.getBarometerData())"
+    },
+    {
+        "nl": "Check if the drone is in API control",
+        "code": "control_status = AirSim_client.isApiControlEnabled()"
+    },
+    {
+        "nl": "Make the drone change direction quickly",
+        "code": "AirSim_client.rotateByYawRateAsync(180, duration=2)"
+    },
+    {
+        "nl": "Get the drone's magnetometer data",
+        "code": "print(AirSim_client.getMagnetometerData())"
+    },
+    {
+        "nl": "Move the drone in a circle",
+        "code": "AirSim_client.moveByVelocityAsync(10, 10, 0, duration=5).rotateByYawRateAsync(20, duration=10)"
+    },
+    {
+        "nl": "Move the drone right and rotate",
+        "code": "AirSim_client.moveByVelocityAsync(0, 10, 0, duration=3).join(); AirSim_client.rotateToYawAsync(270).join();"
+    },
+    {
+        "nl": "Set the drone's camera as enabled",
+        "code": "AirSim_client.setCameraEnabled(True)"
+    },
+    {
+        "nl": "Move the drone diagonally",
+        "code": "AirSim_client.moveByVelocityAsync(10, -10, 0, duration=3)"
+    },
+    {
+        "nl": "Set the drone's home position",
+        "code": "AirSim_client.setHomePosition(0, 0, -10)"
+    },
+    {
+        "nl": "Check if the drone has collision",
+        "code": "print(AirSim_client.getCollisionInfo())"
+    },
+    {
+        "nl": "Set the drone's camera to 'scene' mode",
+        "code": "AirSim_client.setCameraMode(camera_id=0, mode=AirSimImageType.Scene)"
+    },
+    {
+        "nl": "Disable the drone's API control",
+        "code": "AirSim_client.enableApiControl(False)"
+    },
+    {
+        "nl": "Move the drone forward with acceleration",
+        "code": "AirSim_client.moveByVelocityAsync(15, 0, 0, duration=3, acceleration=5)"
+    },
+    {
+        "nl": "Stop the drone's autopilot",
+        "code": "AirSim_client.enableApiControl(False)"
+    },
+    {
+        "nl": "Make the drone hover at a specific position",
+        "code": "AirSim_client.hoverAsync()"
+    },
+    {
+        "nl": "Get the drone's IMU data",
+        "code": "print(AirSim_client.getImuData())"
+    },
+    {
+        "nl": "Change the drone's altitude",
+        "code": "AirSim_client.moveToZAsync(-20, speed=5)"
+    },
+    {
+        "nl": "Get the drone's GPS data",
+        "code": "print(AirSim_client.getGpsData())"
+    },
+    {
+        "nl": "Move the drone left and rotate",
+        "code": "AirSim_client.moveByVelocityAsync(0, -10, 0, duration=3).join(); AirSim_client.rotateToYawAsync(90).join();"
+    },
+    {
+        "nl": "Enable the drone's camera while moving",
+        "code": "AirSim_client.setCameraEnabled(True); AirSim_client.moveByVelocityAsync(10, 0, 0, duration=4).join();"
+    },
+    {
+        "nl": "Get the drone's camera image",
+        "code": "print(AirSim_client.getImage(camera_id=0, image_type=AirSimImageType.Scene))"
+    },
+    {
+        "nl": "Deactivate the drone's emergency mode",
+        "code": "AirSim_client.enableEmergency(False)"
+    },
+    {
+        "nl": "Reset the drone to its initial position",
+        "code": "AirSim_client.reset()"
+    },
+    {
+        "nl": "Enable the drone's sonar",
+        "code": "AirSim_client.setSonarEnabled(True); AirSim_client.moveByVelocityAsync(10, 0, 0, duration=4).join();"
+    },
+    {
+        "nl": "Move forward and stop",
+        "code": "AirSim_client.moveByVelocityAsync(10, 0, 0, duration=3).join(); AirSim_client.hoverAsync().join();"
+    },
+    {
+        "nl": "Check the drone's position",
+        "code": "position = AirSim_client.getMultirotorState().kinematics_estimated.position"
+    },
+    {
+        "nl": "Set the drone's speed to a specific value",
+        "code": "AirSim_client.setMaxSpeed(5)"
+    },
+    {
+        "nl": "Enable the drone's GPS while moving",
+        "code": "AirSim_client.setGpsEnabled(True); AirSim_client.moveByVelocityAsync(10, 0, 0, duration=4).join();"
+    },
+    {
+        "nl": "Disable the drone's GPS",
+        "code": "AirSim_client.setGpsEnabled(False)"
+    },
+    {
+        "nl": "Move the drone up",
+        "code": "AirSim_client.moveByVelocityAsync(0, 0, -20, duration=2)"
+    },
+    {
+        "nl": "Disable collision detection for the drone",
+        "code": "AirSim_client.enableCollisionDetection(False)"
+    },
+    {
+        "nl": "Make the drone hold a position while rotating",
+        "code": "AirSim_client.moveToPositionAsync(5, 5, -10, 3).rotateByYawRateAsync(45, duration=5)"
+    },
+    {
+        "nl": "Get the drone's velocity",
+        "code": "print(AirSim_client.getVelocity())"
+    },
+    {
+        "nl": "Set the drone's angular velocity",
+        "code": "AirSim_client.simSetAngularVelocity(Vector3r(0, 0, math.radians(10)))"
+    },
+    {
+        "nl": "Get the drone's local velocity",
+        "code": "print(AirSim_client.getMultirotorState().kinematics_estimated.linear_velocity)"
+    },
+    {
+        "nl": "Move forward at 5 m/s",
+        "code": "AirSim_client.moveByVelocityAsync(5, 0, 0, duration=3).join()"
+    },
+    {
+        "nl": "Move the drone left",
+        "code": "AirSim_client.moveByVelocityAsync(0, -20, 0, duration=2)"
+    },
+    {
+        "nl": "Activate the drone's emergency mode",
+        "code": "AirSim_client.enableEmergency(True)"
+    },
+    {
+        "nl": "Move diagonally backward at 5 m/s",
+        "code": "AirSim_client.moveByVelocityAsync(-5, 5, 0, duration=3).join()"
+    },
+    {
+        "nl": "Enable the drone to take API control",
+        "code": "AirSim_client.enableApiControl(True)"
+    },
+    {
+        "nl": "Move the drone with specific roll, pitch, and yaw rates",
+        "code": "AirSim_client.moveByRollPitchYawRatesAsync(5, 5, 5, 2)"
+    },
+    {
+        "nl": "Check the drone's battery status",
+        "code": "print(AirSim_client.getBattery())"
+    },
+    {
+        "nl": "Control the drone with roll and pitch independently",
+        "code": "AirSim_client.moveByRollPitchYawRatesAsync(10, -5, 0, 3)"
+    },
+    {
+        "nl": "Move the drone down",
+        "code": "AirSim_client.moveByVelocityAsync(0, 0, 20, duration=2)"
+    },
+    {
+        "nl": "Turn the drone left",
+        "code": "AirSim_client.rotateByYawRateAsync(-90, duration=2)"
+    },
+    {
+        "nl": "Make the drone take off with an acceleration",
+        "code": "AirSim_client.takeoffAsync().accelerate(5)"
+    },
+    {
+        "nl": "Move the drone right at a constant speed",
+        "code": "AirSim_client.moveByVelocityAsync(0, 10, 0, duration=3)"
+    },
+    {
+        "nl": "Get the drone's angular velocity",
+        "code": "print(AirSim_client.getAngularVelocity())"
+    },
+    {
+        "nl": "Check if API control is active",
+        "code": "is_control = AirSim_client.isApiControlEnabled()"
+    },
+    {
+        "nl": "Set drone's maximum speed dynamically",
+        "code": "AirSim_client.setMaxSpeed(10).setMaxSpeed(20)"
+    },
+    {
+        "nl": "Get the drone's attitude",
+        "code": "print(AirSim_client.getMultirotorState().kinematics_estimated.orientation)"
+    },
+    {
+        "nl": "Move the drone upward at a constant speed",
+        "code": "AirSim_client.moveByVelocityAsync(0, 0, -10, duration=3)"
+    },
+    {
+        "nl": "Deactivate the drone's emergency mode",
+        "code": "AirSim_client.enableEmergency(False)"
+    },
+    {
+        "nl": "Move left at 5 m/s",
+        "code": "AirSim_client.moveByVelocityAsync(0, -5, 0, duration=3).join()"
+    },
+    {
+        "nl": "Set the drone's GPS as enabled",
+        "code": "AirSim_client.setGpsEnabled(True)"
+    },
+    {
+        "nl": "Fly the drone in reverse at constant speed",
+        "code": "AirSim_client.moveByVelocityAsync(-10, 0, 0, duration=3)"
+    },
+    {
+        "nl": "Get the drone's camera image",
+        "code": "print(AirSim_client.getImage(camera_id=0, image_type=AirSimImageType.Scene))"
+    },
+    {
+        "nl": "Angular velocity",
+        "code": "angular_velocity = AirSim_client.getAngularVelocity()"
+    },
+    {
+        "nl": "Move in circle",
+        "code": "AirSim_client.moveByVelocityAsync(5, 5, 0, duration=4).join(); AirSim_client.rotateByYawRateAsync(20, duration=5).join();"
+    },
+    {
+        "nl": "Get the drone's magnetometer data",
+        "code": "print(AirSim_client.getMagnetometerData())"
+    },
+    {
+        "nl": "Make the drone rotate continuously",
+        "code": "AirSim_client.rotateByYawRateAsync(30, duration=10)"
+    },
+    {
+        "nl": "Check API control",
+        "code": "is_control = AirSim_client.isApiControlEnabled()"
+    },
+    {
+        "nl": "Disable collision detection for the drone",
+        "code": "AirSim_client.enableCollisionDetection(False)"
+    },
+    {
+        "nl": "Control the drone's position using velocities",
+        "code": "AirSim_client.moveByVelocityAsync(10, 10, -5, duration=3)"
+    },
+    {
+        "nl": "Move the drone using roll, pitch, and yaw rates",
+        "code": "AirSim_client.moveByRollPitchYawRatesAsync(10, -10, 5, 3)"
+    },
+    {
+        "nl": "Move the drone up with specific velocity",
+        "code": "AirSim_client.moveByVelocityAsync(0, 0, 5, duration=2)"
+    },
+    {
+        "nl": "Activate the drone's emergency mode",
+        "code": "AirSim_client.enableEmergency(True)"
+    },
+    {
+        "nl": "Set the drone's lidar as enabled",
+        "code": "AirSim_client.setLidarEnabled(True)"
+    },
+    {
+        "nl": "Move right for 5 seconds",
+        "code": "AirSim_client.moveByVelocityAsync(0, 5, 0, duration=5).join()"
+    },
+    {
+        "nl": "Follow a waypoint list",
+        "code": "AirSim_client.moveOnPathAsync([Vector3r(0,0,-10), Vector3r(5,5,-10)], velocity=5)"
+    },
+    {
+        "nl": "Enable the drone's lidar during movement",
+        "code": "AirSim_client.setLidarEnabled(True); AirSim_client.moveByVelocityAsync(10, 0, 0, duration=4).join();"
+    },
+    {
+        "nl": "Disable the drone's lidar",
+        "code": "AirSim_client.setLidarEnabled(False)"
+    },
+    {
+        "nl": "Descend at 3 m/s",
+        "code": "AirSim_client.moveByVelocityAsync(0, 0, 3, duration=3).join()"
+    },
+    {
+        "nl": "Move forward at 5 m/s",
+        "code": "AirSim_client.moveByVelocityAsync(5, 0, 0, duration=3).join()"
+    },
+    {
+        "nl": "Disable the drone's GPS",
+        "code": "AirSim_client.setGpsEnabled(False)"
+    },
+    {
+        "nl": "Adjust the drone's yaw rate",
+        "code": "AirSim_client.rotateByYawRateAsync(30, duration=2)"
+    },
+    {
+        "nl": "Disable the drone's camera",
+        "code": "AirSim_client.setCameraEnabled(False)"
+    },
+    {
+        "nl": "Move left for 5 seconds",
+        "code": "AirSim_client.moveByVelocityAsync(0, -5, 0, duration=5).join()"
+    },
+    {
+        "nl": "Move the drone backward",
+        "code": "AirSim_client.moveByVelocityAsync(-20, 0, 0, duration=2)"
+    },
+    {
+        "nl": "Get the drone's gyro data",
+        "code": "print(AirSim_client.getGyroData())"
+    },
+    {
+        "nl": "Get the drone's current velocity",
+        "code": "print(AirSim_client.getVelocity())"
+    },
+    {
+        "nl": "Enable collision detection for the drone",
+        "code": "AirSim_client.enableCollisionDetection(True)"
+    },
+    {
+        "nl": "Turn the drone to a specific yaw angle",
+        "code": "AirSim_client.rotateToYawAsync(45)"
+    },
+    {
+        "nl": "Get the drone's current position",
+        "code": "print(AirSim_client.getMultirotorState().kinematics_estimated.position)"
+    },
+    {
+        "nl": "Make the drone follow a path",
+        "code": "AirSim_client.moveToPositionAsync(0, 0, -10, speed=5)"
+    },
+    {
+        "nl": "Change the drone's velocity",
+        "code": "AirSim_client.moveByVelocityAsync(10, 0, 0, duration=2)"
+    },
+    {
+        "nl": "Stop the drone's movement",
+        "code": "AirSim_client.moveByVelocityAsync(0, 0, 0, duration=0)"
+    },
+    {
+        "nl": "Enable the drone's sonar",
+        "code": "AirSim_client.setSonarEnabled(True)"
+    },
+    {
+        "nl": "Rotate 90 degrees",
+        "code": "AirSim_client.rotateToYawAsync(90).join()"
+    },
+    {
+        "nl": "Move the drone to a position and rotate at the same time",
+        "code": "AirSim_client.moveToPositionAsync(10, -5, -10, 5).rotateByYawRateAsync(45, duration=5)"
+    },
+    {
+        "nl": "Disable the drone's lidar",
+        "code": "AirSim_client.setLidarEnabled(False)"
+    },
+    {
+        "nl": "Set the drone's yaw angle while moving",
+        "code": "AirSim_client.moveByVelocityAsync(10, 0, 0, duration=5).rotateToYawAsync(90)"
+    },
+    {
+        "nl": "Turn the drone right",
+        "code": "AirSim_client.rotateByYawRateAsync(90, duration=2)"
+    },
+    {
+        "nl": "Enable autopilot for the drone",
+        "code": "AirSim_client.enableApiControl(True)"
+    },
+    {
+        "nl": "Check the drone's yaw angle",
+        "code": "yaw = AirSim_client.getYaw()"
+    },
+    {
+        "nl": "Stop the drone's autopilot",
+        "code": "AirSim_client.enableApiControl(False)"
+    },
+    {
+        "nl": "Get the drone's barometer data",
+        "code": "print(AirSim_client.getBarometerData())"
+    },
+    {
+        "nl": "Smooth takeoff and check",
+        "code": "AirSim_client.takeoffAsync().join(); AirSim_client.moveByVelocityAsync(5, 0, 0, duration=5).join(); AirSim_client.getBattery()"
+    },
+    {
+        "nl": "Check the drone's velocity",
+        "code": "velocity = AirSim_client.getVelocity()"
+    },
+    {
+        "nl": "Change drone's altitude while moving",
+        "code": "AirSim_client.moveByVelocityAsync(10, 0, -10, duration=3).moveToZAsync(-20, 5)"
+    },
+    {
+        "nl": "Enable collision detection during movement",
+        "code": "AirSim_client.enableCollisionDetection(True); AirSim_client.moveByVelocityAsync(10, 0, 0, duration=3).join();"
+    },
+    {
+        "nl": "Enable autopilot while moving",
+        "code": "AirSim_client.enableApiControl(True); AirSim_client.moveByVelocityAsync(10, 0, 0, duration=4).join();"
+    },
+    {
+        "nl": "Get the drone's camera image in 'depth' mode",
+        "code": "print(AirSim_client.getImage(camera_id=0, image_type=AirSimImageType.DepthPerspective))"
+    },
+    {
+        "nl": "Get the drone's current position",
+        "code": "print(AirSim_client.getMultirotorState().kinematics_estimated.position)"
+    },
+    {
+        "nl": "Set the drone's maximum speed",
+        "code": "AirSim_client.setMaxSpeed(7)"
+    },
+    {
+        "nl": "Check collision",
+        "code": "collision_info = AirSim_client.getCollisionInfo()"
+    },
+    {
+        "nl": "Check altitude",
+        "code": "altitude = AirSim_client.getMultirotorState().kinematics_estimated.position.z_val"
+    },
+    {
+        "nl": "Move the drone to a new altitude",
+        "code": "AirSim_client.moveToZAsync(-15, 5)"
+    },
+    {
+        "nl": "Enable GPS again",
+        "code": "AirSim_client.setGpsEnabled(True); AirSim_client.moveByVelocityAsync(10, 0, 0, duration=4).join();"
+    },
+    {
+        "nl": "Make the drone take off",
+        "code": "AirSim_client.takeoffAsync().join()"
+    },
+    {
+        "nl": "Make the drone land",
+        "code": "AirSim_client.landAsync().join()"
+    },
+    {
+        "nl": "Set the drone's camera position",
+        "code": "AirSim_client.setCameraPosition(camera_id=0, x=10, y=10, z=-10)"
+    },
+    {
+        "nl": "Enable the drone's GPS while moving",
+        "code": "AirSim_client.setGpsEnabled(True).moveToPositionAsync(10, 10, -10, 5)"
+    },
+    {
+        "nl": "Make the drone perform a flip",
+        "code": "AirSim_client.simFlite.doFlip()"
+    },
+    {
+        "nl": "Enable the drone's API control",
+        "code": "AirSim_client.enableApiControl(True)"
+    },
+    {
+        "nl": "Move the drone to a specific height",
+        "code": "AirSim_client.moveToZAsync(-10, 5)"
+    },
+    {
+        "nl": "Start the drone's autopilot",
+        "code": "AirSim_client.enableApiControl(True)"
+    },
+    {
+        "nl": "Check the drone's local position",
+        "code": "local_position = AirSim_client.getMultirotorState().kinematics_estimated.position"
+    },
+    {
+        "nl": "Get the drone's heading (yaw)",
+        "code": "print(AirSim_client.getYaw())"
+    },
+    {
+        "nl": "Set the drone's home location",
+        "code": "AirSim_client.setHomePosition(0, 0, -10)"
+    },
+    {
+        "nl": "Enable the drone's lidar",
+        "code": "AirSim_client.setLidarEnabled(True)"
+    },
+    {
+        "nl": "Get the drone's local position",
+        "code": "print(AirSim_client.getMultirotorState().kinematics_estimated.position)"
+    },
+    {
+        "nl": "Simulate a smooth takeoff",
+        "code": "AirSim_client.takeoffAsync().moveByVelocityAsync(5, 0, 0, duration=5)"
+    },
+    {
+        "nl": "Monitor the drone's real-time speed",
+        "code": "while True: print(AirSim_client.getVelocity())"
+    },
+    {
+        "nl": "Set the drone's speed limit",
+        "code": "AirSim_client.setMaxSpeed(10)"
+    },
+    {
+        "nl": "Enable the drone's visual detection system",
+        "code": "AirSim_client.setVisualDetectionEnabled(True)"
+    },
+    {
+        "nl": "Make the drone rotate to follow a target",
+        "code": "AirSim_client.rotateToYawAsync(AirSim_client.getTargetYaw())"
+    },
+    {
+        "nl": "Move backward at 5 m/s",
+        "code": "AirSim_client.moveByVelocityAsync(-5, 0, 0, duration=3).join()"
+    },
+    {
+        "nl": "Descend to 5 meters",
+        "code": "AirSim_client.moveToZAsync(-5, 5).join()"
+    },
+    {
+        "nl": "Reset the drone's position",
+        "code": "AirSim_client.reset()"
+    },
+    {
+        "nl": "Set the drone's camera resolution",
+        "code": "AirSim_client.setCameraResolution(camera_id=0, width=1280, height=720)"
+    },
+    {
+        "nl": "Simulate a drone crash",
+        "code": "AirSim_client.simulateCrash()"
+    },
+    {
+        "nl": "Get the drone's IMU data",
+        "code": "print(AirSim_client.getImuData())"
+    },
+    {
+        "nl": "Move the drone to a specific waypoint",
+        "code": "AirSim_client.moveToPositionAsync(0, 0, -10, speed=5)"
+    },
+    {
+        "nl": "Enable collision detection for the drone",
+        "code": "AirSim_client.enableCollisionDetection(True)"
+    },
+    {
+        "nl": "Check if API control is enabled",
+        "code": "is_control = AirSim_client.isApiControlEnabled()"
+    },
+    {
+        "nl": "Move left at 10 m/s",
+        "code": "AirSim_client.moveByVelocityAsync(0, -10, 0, duration=3).join()"
+    },
+    {
+        "nl": "Get the drone's angular velocity",
+        "code": "print(AirSim_client.getAngularVelocity())"
+    },
+    {
+        "nl": "Get the drone's current state",
+        "code": "print(AirSim_client.getMultirotorState())"
+    }
+]
